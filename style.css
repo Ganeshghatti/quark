@@ -24,7 +24,6 @@ purp {
   outline: 0;
 }
 .bubbly-button:before, .bubbly-button:after {
-  position: absolute;
   content: "";
   display: block;
   width: 140%;
@@ -152,8 +151,6 @@ html, body {
 }
 #one-stop-shop .main-card {
   border: solid #970097;
-  width: 30%;
-  height: 270px;
   background: linear-gradient(45deg, rgba(178, 0, 171, 0.27) 0%, rgba(41, 0, 39, 0.5) 45%, rgba(0, 0, 0, 0.8) 100%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -165,6 +162,7 @@ html, body {
   flex-direction: column;
   padding-top: 6px;
   color: white;
+  height:100%;
 }
 #one-stop-shop .main-card p {
   font-size: 12;
@@ -263,12 +261,12 @@ html, body {
 }
 
 .item{
-  height:150px;
+  height:75px;
 }
 
 .item img{
   height:100%;
-  object-fit:contain
+  object-fit:cover:
 }
 
 #gradient-end{
@@ -281,4 +279,8 @@ html, body {
   background-color: #f6a4ff !important;
   color:black !important;
   font-weight:bold !important;
+}
+
+.fab{
+  color:white;
 }
