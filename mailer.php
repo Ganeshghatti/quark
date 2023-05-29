@@ -21,7 +21,7 @@ echo "processing..";
         $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'contact@quarkmarketing.in';
-        $mail->Password = 'QuackQuack123@';
+        $mail->Password = '#########';
         $mail->SMTPSecure = 'ssl';
         $mail->Port=465;
         $mail->setFrom('contact@quarkmarketing.in', 'Quark Marketing');
