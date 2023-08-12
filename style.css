@@ -4,7 +4,9 @@
 purp {
   color: #f6a4ff;
 }
-
+body{
+  overflow-x: hidden;
+}
 .fa-bars{
   color: white;
   z-index: 5;
@@ -159,8 +161,9 @@ html, body {
   position: relative;
   height: 70vh;
   top:10vh;
-  left: 10%;
+  left: 5%;
   color: white;
+  width: 90vw;
 }
 
 #hero-text h1 {
@@ -239,14 +242,14 @@ html, body {
 }
 
 .carousel1{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
 }
 
 .carousel2{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
@@ -289,7 +292,7 @@ html, body {
 }
 
 .carousel10{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
@@ -309,7 +312,7 @@ html, body {
 
 .item img{
   height:100%;
-  object-fit:cover:
+  object-fit:cover;
 }
 
 
@@ -323,6 +326,9 @@ html, body {
   color:white;
 }
 
+.fixed-top{
+  width: 98vw;
+}
 .mobile-menu{
   display: flex;
   position: fixed;
