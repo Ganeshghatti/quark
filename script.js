@@ -32,27 +32,43 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.25, 12, 12);
   // const material = new THREE.MeshStandardMaterial({ color: 0x620462 });
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
-  const [x, y, z] = Array(3)
-    .fill()
-    .map(() => THREE.Math.randFloatSpread(150));
-  star.position.set(x, y, z);
-  scene.add(star);
-  scene.add(star);
-  scene.add(star);
+  star.position.set(
+    THREE.Math.randFloatSpread(150),
+    THREE.Math.randFloatSpread(150),
+    THREE.Math.randFloatSpread(150)
+  );
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
-Array(200).fill().forEach(addStar);
+for (var i = 0; i < 100; i++) {
+  addStar();
+}
+
+
+//OLD CODE
+// const star = new THREE.Mesh(geometry, material);
+// const [x, y, z] = Array(3)
+//   .fill()
+//   .map(() => THREE.Math.randFloatSpread(150));
+// star.position.set(x, y, z);
+// scene.add(star);
+// scene.add(star);
+// scene.add(star);
+// scene.add(star);
+// }
+
+// Array(100).fill().forEach(addStar);
+// Array(100).fill().forEach(addStar);
+
 
 if (window.innerWidth < 900) {
-  var sphere_geometry = new THREE.SphereGeometry(0.05, 68, 68);
+  var sphere_geometry = new THREE.SphereGeometry(0.05, 84, 84);
 } else {
-  var sphere_geometry = new THREE.SphereGeometry(1, 128, 128);
+  var sphere_geometry = new THREE.SphereGeometry(1, 84, 84);
 }
 
 var material = new THREE.MeshNormalMaterial();
@@ -124,11 +140,11 @@ var animateButton = function (e) {
   }, 700);
 };
 
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
+// var bubblyButtons = document.getElementsByClassName("bubbly-button");
 
-for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener("click", animateButton, false);
-}
+// for (var i = 0; i < bubblyButtons.length; i++) {
+//   bubblyButtons[i].addEventListener("click", animateButton, false);
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
   el_autohide = document.querySelector(".autohide");
@@ -155,6 +171,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // if
 });
 // DOMContentLoaded  end
+window.addEventListener("resize", () => {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+});
 
 $(".owl-carousel").owlCarousel({
   loop: true,
