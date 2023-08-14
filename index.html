@@ -439,7 +439,8 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
       max-width: 120px;
     }
   </style>
-  <script>
+<script>
+  if (window.innerWidth > 1000) {
     new Glide('.glide', {
       type: 'carousel',
       perView: 6, 
@@ -447,7 +448,25 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
       autoplay: 4000,
       animationDuration: 500,
     }).mount();
-  </script> 
+  } else if (window.innerWidth <= 1000 && window.innerWidth >= 550) {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 4, 
+      gap: 20, 
+      autoplay: 4000,
+      animationDuration: 500,
+    }).mount();
+  } else if (window.innerWidth < 550) {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 2, 
+      gap: 20, 
+      autoplay: 4000,
+      animationDuration: 500,
+    }).mount();
+  }
+</script>
+
   
   <!-- <section id="clients">
      <h1 class="display-3 my-5 font-weight-bold text-center" style="font-weight:bold !important">CLIENTS WHO TRUST US</h1>
