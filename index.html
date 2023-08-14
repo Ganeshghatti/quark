@@ -33,7 +33,9 @@
   <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -314,27 +316,127 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
   </section>
   </div>
   </section>
-
-  <section id="clients"><h1 class="display-3 my-5 font-weight-bold text-center" style="font-weight:bold !important">CLIENTS WHO TRUST US</h1><div class="glide"><div class="glide__track"><ul class="glide__slides owl-carousel owl-theme">
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/1.webp" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/2.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/3.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/4.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/5.png" class="client-img"/></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/6.png" class="client-img"/></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/7.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/8.png" class="client-img"/></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/9.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/10.png" class="client-img"/></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/11.png" class="client-img"/></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/12.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/13.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/14.png" class="client-img" /></div></li>
-    <li class='glide__slide item'><div class="client-container"><img src="./assets/images/Clients/15.png" class="client-img" /></div></li>
-    </ul></div></div><style>.client-container {display: flex;flex-direction: row;justify-content: center;align-items: center;}.client-img {max-width: 120px;}</style><script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script><script>new Glide('.glide', {type: 'carousel',perView: 7,gap: 5,autoplay: 4000,animationDuration: 500,}).mount();</script></section>
+  
+  <!-- <section id="clients">
+    <h1 class="display-3 my-5 font-weight-bold text-center" style="font-weight:bold !important">CLIENTS WHO TRUST US</h1>
+    <div class="glide">
+      <div class="glide__track">
+        <ul class="glide__slides owl-carousel owl-theme">
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/1.webp" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/2.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/3.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/4.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/5.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/6.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/7.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/8.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/9.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/10.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/11.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/12.png" class="client-img" />
+            </div>
+          </li>
+          <li class='glide__slide item'>
+            <div class="client-container">
+              <img src="./assets/images/Clients/13.png" class="client-img" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <style>
+      .client-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .client-img {
+        max-width: 120px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script>
+      new Glide('.glide', {
+        type: 'carousel',
+        perView: 3, // Adjust the number of visible slides as needed
+        gap: 20,   // Adjust the gap between slides as needed
+        autoplay: 4000,
+        animationDuration: 500,
+      }).mount();
+    </script>    
+  </section> -->
+  
     
-  
-  
+  <div class="glide">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="./assets/images/Clients/1.webp" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/2.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/3.png" class="client-img" /></li>
+      </ul>
+    </div>
+  </div>
+  <style>
+    .client-img{
+      max-width: 120px;
+    }
+  </style>
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 6, 
+      gap: 20, 
+      autoplay: 4000,
+      animationDuration: 500,
+    }).mount();
+  </script> 
   
   <!-- <section id="clients">
      <h1 class="display-3 my-5 font-weight-bold text-center" style="font-weight:bold !important">CLIENTS WHO TRUST US</h1>
@@ -511,7 +613,7 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
 <script src='https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js'></script>
 <script  src="./script.js"></script>
 <script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
-<script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
@@ -524,16 +626,15 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
       });
     });
 </script>
-  </script>
+  </script> -->
 
 </body>
 </html>
-bs/three.js/r83/three.js'></script>
-<script src='https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js'></script>
+<!-- <script src='https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js'></script>
 <script  src="./script.js"></script>
 <script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
-<script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-<script>
+<script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script> -->
+<!-- <script>
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
         loop: true,
@@ -544,8 +645,8 @@ bs/three.js/r83/three.js'></script>
         autoWidth: true
       });
     });
-</script>
-  </script>
+</script> -->
+  <!-- </script>
 
 </body>
-</html>
+</html> -->
