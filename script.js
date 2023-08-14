@@ -149,7 +149,6 @@ var animateButton = function (e) {
 document.addEventListener("DOMContentLoaded", function () {
   el_autohide = document.querySelector(".autohide");
 
-  // add padding-top to bady (if necessary)
   navbar_height = document.querySelector(".navbar").offsetHeight;
   document.body.style.paddingTop = navbar_height + "px";
 
@@ -166,33 +165,31 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       last_scroll_top = scroll_top;
     });
-    // window.addEventListener
   }
-  // if
 });
-// DOMContentLoaded  end
+
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 });
 
-$(".owl-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
+// $(".owl-carousel").owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: true,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     600: {
+//       items: 3,
+//     },
+//     1000: {
+//       items: 5,
+//     },
+//   },
+// });
 
 //MENU
 
