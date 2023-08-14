@@ -372,7 +372,11 @@ display: none;
   padding-top: 40px;
 }
 @media (max-width:770px){
-  .g-glide,.carousel10-pc,.carousel2-pc,.carousel22-pc{
+  #clientele{
     display: none;
   }
+}
+.text-decoration-none {
+  text-decoration: none;
+  color: white;
 }
