@@ -4,7 +4,13 @@
 purp {
   color: #f6a4ff;
 }
-
+body{
+  overflow-x: hidden;
+}
+.fa-bars{
+  color: white;
+  z-index: 5;
+}
 #gradient-end{
   padding-top: 25px;
   background: linear-gradient(0deg, rgba(35, 22, 64, 0.05) 0%, rgba(46, 43, 64, 0.5) 23%, rgba(46, 43, 64, 0.8) 53%,  #2e2b40 80%);
@@ -40,8 +46,6 @@ purp {
   display: inline-block;
   font-size: 1em;
   padding: 1em 2em;
-  -webkit-appearance: none;
-  appearance: none;
   background-color: #b200ab;
   color: #fff;
   border-radius: 10px;
@@ -52,7 +56,7 @@ purp {
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
-.bubbly-button:focus {
+/* .bubbly-button:focus {
   outline: 0;
 }
 .bubbly-button:before, .bubbly-button:after {
@@ -114,7 +118,7 @@ purp {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
-}
+} */
 body {
   overflow-x: hidden;
 }
@@ -155,8 +159,9 @@ html, body {
   position: relative;
   height: 70vh;
   top:10vh;
-  left: 10%;
+  left: 5%;
   color: white;
+  width: 90vw;
 }
 
 #hero-text h1 {
@@ -235,24 +240,27 @@ html, body {
 }
 
 .carousel1{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
 }
 
 .carousel2{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
 }
+.carousel1 {
+  overflow-x: hidden;
+  margin-right: 3px;
+}
 .carousel1 img{
     object-fit: cover;
     height: 245px;
-    max-width: 100%;
+    width: auto;
 }
-
 
 .carousel2 img{
     object-fit: cover;
@@ -266,20 +274,23 @@ html, body {
     height: 400px;
 }
 .carousel22{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
+    overflow-x: hidden;
+    margin-right: 3px;
 }
 .carousel22 img{
     object-fit: cover;
     margin-bottom:2px;
-    width: 100%;
+    width: auto;
+    aspect-ratio: 3/2;
     height: 122px;
 }
 
 .carousel10{
-    // box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
+    box-shadow: inset 0px 0px 65px -5px rgba(204, 2, 207, 1);
     padding: 5px;
     padding-left: 0px ;
     padding-right: 0px;
@@ -287,10 +298,11 @@ html, body {
 
 
 #clients{
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
   background: #2e2b40;
   position: relative;
+  height: auto;
 }
 
 .item{
@@ -299,7 +311,7 @@ html, body {
 
 .item img{
   height:100%;
-  object-fit:cover:
+  object-fit:cover;
 }
 
 
@@ -311,4 +323,66 @@ html, body {
 
 .fab{
   color:white;
+}
+
+.fixed-top{
+  width: 98vw;
+}
+.mobile-menu{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 30vw;
+  width: 70vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.91);
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.mobile-menu ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.overlay-mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.365);
+display: none;
+}
+.navbar-toggler{
+  padding: 0 30px  0 0 ;
+}
+.mobile-menu .nav-mobilebar-nav-mobile li{
+  list-style: none;
+}
+.mobile-menu .nav-mobilebar-nav-mobile li a{
+  text-decoration: none;
+  color: white;
+}
+.mobile-menu-social-link{
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  padding-top: 40px;
+}
+@media (max-width:770px){
+  #clientele{
+    display: none;
+  }
+}
+@media (min-width:770px){
+  #clients-mobile{
+    display: none;
+  }
+}
+.text-decoration-none {
+  text-decoration: none;
+  color: white;
 }

@@ -32,6 +32,9 @@
   <link href="./node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
   <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
@@ -50,13 +53,51 @@ backdrop-filter: blur(5px);
 border: 1px solid rgba(44, 67, 79, 0.3);">
            <div class="container " id="mainNav">
             <a class="navbar-brand me-auto" href="/">
-              <img src="https://ik.imagekit.io/hrush/assets/images/logo.png?updatedAt=1683794419709" height="93" alt="Quark Marketing" >
+              <img src="https://ik.imagekit.io/hrush/assets/images/logo.png?updatedAt=1683794419709" height="75" alt="Quark Marketing" >
             </a>
 
-            <button class="ms-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" onclick="toggleMenu()" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
             </button>
-
+            <div class="overlay-mobile"  onclick="closeMenu()" ></div>
+<div class="mobile-menu">
+  <ul class="nav-mobilebar-nav-mobile">
+    <li class="nav-mobile-item">
+      <a class="nav-mobile-link" href="#one-stop-shop" onclick="closeMenu()">Services</a>
+    </li>
+    <li class="nav-mobile-item">
+      <a class="nav-mobile-link" href="#clientele" onclick="closeMenu()">Portfolio</a>
+    </li>
+    <li class="nav-mobile-item">
+      <a class="nav-mobile-link" href="#clients" onclick="closeMenu()">Clients</a>
+    </li>
+    <li class="nav-mobile-item">
+      <a class="nav-mobile-link" href="#about" onclick="closeMenu()">About Us</a>
+    </li>
+    <li class="nav-mobile-item">
+      <a class="nav-mobile-link" href="#contact" onclick="closeMenu()">Contact Us</a>
+    </li>
+    <div class="mobile-menu-social-link">
+    <li class="nav-mobile-item">
+      <a
+        class="btn nav-mobile-link btn-link  btn-lg text-white "
+        href="https://www.linkedin.com/company/quark-marketing/"
+        role="button"
+        data-mdb-ripple-color="light"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </li>
+    <li class="nav-mobile-item">
+      <a
+        class="btn nav-mobile-link btn-link  btn-lg text-white "
+        href="https://www.instagram.com/quarkmarketing/"
+        role="button"
+        data-mdb-ripple-color="light"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </li></div>
+  </ul>
+</div>
             <div class="ms-auto collapse navbar-collapse " id="navbarNav" style="flex-direction:row-reverse">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -92,7 +133,6 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
                     ><i class="fab fa-instagram"></i
                   ></a>
                 </li>
-
               </ul>
             </div>
            </div>
@@ -102,8 +142,8 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
         
   
   <section id="hero-text">
-    <h1 class="display-1 ">QUARK MARKETING</h1>
-    <h3 class="display-5">Elevate Your Brand With Us</h3>
+    <h1 class="display-1 " style="width: 80vw;">QUARK MARKETING</h1>
+    <h3 class="display-5" style="width: 80vw;">Elevate Your Brand With Us</h3>
     <br>
     <br>
     <a id="hero-button" href="./#contact">
@@ -126,7 +166,9 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-          <a href="./ContentCreation.html" class="text-white text-decoration-none"><button class="bubbly-button mt-5" >Learn More</button></a>
+          <a href="./ContentCreation.html" class="text-white text-decoration-none">Learn More
+            <!-- <button class="bubbly-button mt-5" >Learn More</button> -->
+          </a>
         </div>
       </div>
     </div>
@@ -139,8 +181,9 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-          <a href="./SocialMediaManagement.html" class="text-white text-decoration-none"><button class="bubbly-button mt-5" >Learn More
-            </button>
+          <a href="./SocialMediaManagement.html" class="text-white text-decoration-none">Learn More
+            <!-- <button class="bubbly-button mt-5" >Learn More
+            </button> -->
           </a>
         </div>
       </div>
@@ -155,10 +198,10 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-            <a href="./AdManagement.html" class="text-white text-decoration-none">
-              <button class="bubbly-button mt-5" >
-                  Learn More  
-              </button>
+            <a href="./AdManagement.html" class="text-white text-decoration-none">Learn More  
+              <!-- <button class="bubbly-button mt-5" > -->
+                  <!-- Learn More  
+              </button> -->
             </a>
         </div>
       </div>
@@ -172,10 +215,10 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-            <a href="./GraphicDesigning.html" class="text-white text-decoration-none">
-              <button class="bubbly-button mt-5" >
-                  Learn More
-              </button>
+            <a href="./GraphicDesigning.html" class="text-white text-decoration-none">Learn More  
+              <!-- <button class="bubbly-button mt-5" > -->
+                  <!-- Learn More
+              </button> -->
             </a>
         </div>
       </div>
@@ -190,11 +233,12 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-            <a href="./ITServices.html" class="text-white text-decoration-none">
-              <button class="bubbly-button mt-5" >
-                  Learn More
-              </button>
-            </a>
+          <a href="./ITServices.html" class="text-white text-decoration-none">Learn More  </a>
+            <!-- <a href="./ITServices.html" class="text-white text-decoration-none">Learn More   -->
+              <!-- <button class="bubbly-button mt-5" > -->
+                  <!-- Learn More
+              </button> -->
+            <!-- </a> -->
         </div>
       </div>
     </div>
@@ -208,17 +252,15 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
           <br>
           <br>
           <br>
-            <a href="./ContentWriting.html" class="text-white text-decoration-none">
-              <button class="bubbly-button mt-5" >
-                  Learn More
-              </button>
+            <a href="./ContentWriting.html" class="text-white text-decoration-none">Learn More  
+              <!-- <button class="bubbly-button mt-5" > -->
+                  <!-- Learn More
+              </button> -->
             </a>
       </div>
 
     </div>
-    </div>
-      
-      
+    </div> 
     </div>
   </section>
     
@@ -230,11 +272,8 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
       <div class="in-action ">
 
           <div class="row full-carousel" >
-
-
               <div class="col-md-5">
-
-                  <div class="row carousel1">
+                  <div class="row carousel1 carouselpc">
                           <a class="col-2 " href="./assets/images/carousel1/img1.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img1.jpg" /></a>
                           <a class="col-2 " href="./assets/images/carousel1/img2.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img2.jpg" /></a>
                           <a class="col-2 " href="./assets/images/carousel1/img3.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img3.jpg" /></a>
@@ -242,86 +281,216 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
                           <a class="col-2 " href="./assets/images/carousel1/img5.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img5.jpg" /></a>
                           <a class="col-2 " href="./assets/images/carousel1/img6.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img6.jpg" /></a>
                   </div>
-
-                  <div class="row carousel10 4">
+                  <div class="row carousel10 carousel10-pc 4">
                           <a href="./assets/images/row20.png" data-lightbox="carousel10"><img src="./assets/images/row20.png" width="100" /></a>
                   </div>
                       
           </div>
 
           <div class="col-md-7">
-              <div class="row carousel2">
+              <div class="row carousel2 carousel2-pc">
                       <a href="./assets/images/row11.png" data-lightbox="carousel2"><img src="./assets/images/row11.png" /></a>
               </div>
 
-              <div class="row carousel22">
+              <div class="row carousel22 carousel22-pc">
                       <a class="col-4 " href="./assets/images/carousel2/1.png" data-lightbox="carousel22"><img class="carousel22img" src="./assets/images/carousel2/1.png" /></a>
                       <a class="col-4 " href="./assets/images/carousel2/2.jpg" data-lightbox="carousel22"><img class="carousel22img" src="./assets/images/carousel2/2.jpg" /></a>
                       <a class="col-4 " href="./assets/images/carousel2/3.jpg" data-lightbox="carousel22"><img class="carousel22img"src="./assets/images/carousel2/3.jpg" /></a>
                       <a class="col-4 " href="./assets/images/carousel2/4.png" data-lightbox="carousel22"><img class="carousel22img"src="./assets/images/carousel2/4.png"/></a>
                       <a class="col-4 " href="./assets/images/carousel2/5.jpg" data-lightbox="carousel22"><img class="carousel22img"src="./assets/images/carousel2/5.jpg" /></a>
                       <a class="col-4 " href="./assets/images/carousel2/6.png" data-lightbox="carousel22"><img class="carousel22img"src="./assets/images/carousel2/6.png" /></a>
-              </div>
-
-              
+              </div>              
           </div>
-
           </div>
-
-
       </div>
 
       
     </div>
   </section>
+
+
+  <section id="clients-mobile">
+    <h1 class="display-3 mt-5 font-weight-bold text-center" style="font-weight:bold !important">CATCH US IN <purp>ACTION</purp></h1>
+  <div class="g-glide">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+      <li class="glide__slide"> <a class="col-2 " href="./assets/images/carousel1/img1.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img1.jpg" class="mobile-carousel-img"/></a></li>
+      <li class="glide__slide"> <a class="col-2 " href="./assets/images/carousel1/img2.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img2.jpg" class="mobile-carousel-img"/></a></li>
+      <li class="glide__slide"> <a class="col-2 " href="./assets/images/carousel1/img3.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img3.jpg" class="mobile-carousel-img"/></a></li>                
+      <li class="glide__slide"><a class="col-2 " href="./assets/images/carousel1/img5.png" data-lightbox="carousel1"><img src="./assets/images/carousel1/img5.jpg" class="mobile-carousel-img"/></a></li>
+      <li class="glide__slide"><a class="col-2 " href="./assets/images/carousel1/img6.jpg" data-lightbox="carousel1"><img src="./assets/images/carousel1/img6.jpg" class="mobile-carousel-img"/></a></li></ul>
+    </div>
   </div>
+  <style>
+
+    .mobile-carousel-img{
+      max-width:240px;
+    }
+      .g-glide{
+        display: none;
+        padding: 15px 10px 0 10px;
+      }
+  
+  </style>
+  <!-- <div class="g2-glide">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+      <li class="glide__slide"><a class="col-4 " href="./assets/images/carousel2/1.png" data-lightbox="carousel22"><img class="carousel22img mobile-carousel2-img" src="./assets/images/carousel2/1.png" /></a></li>
+      <li class="glide__slide"><a class="col-4 " href="./assets/images/carousel2/3.jpg" data-lightbox="carousel22"><img class="carousel22img mobile-carousel2-img" src="./assets/images/carousel2/3.jpg" /></a></li>                
+      <li class="glide__slide"><a class="col-4 " href="./assets/images/carousel2/4.png" data-lightbox="carousel22"><img class="carousel22img mobile-carousel2-img" src="./assets/images/carousel2/4.png"/></a></li>
+      <li class="glide__slide"><a class="col-4 " href="./assets/images/carousel2/5.jpg" data-lightbox="carousel22"><img class="carousel22img mobile-carousel2-img" src="./assets/images/carousel2/5.jpg" /></a></li>
+    </ul>
+    </div>
+  </div>
+  <style>
+
+    .mobile-carousel2-img{
+      max-height: 300px;
+      object-fit: cover;
+    }
+      .g2-glide{
+        display: none;
+      }
+  
+  </style> -->
+  <script>
+    if (window.innerWidth <= 770 && window.innerWidth >= 500) {
+     document.getElementsByClassName("g-glide")[0].style.display="block"
+     document.getElementsByClassName("carouselpc")[0].style.display="none"
+  new Glide('.g-glide', {
+  type: 'carousel',
+  perView: 3, 
+  gap: 20, 
+  autoplay: 3000,
+  animationDuration: 500,
+  }).mount();
+  } else if (window.innerWidth < 500) {
+  document.getElementsByClassName("g-glide")[0].style.display="block"
+  document.getElementsByClassName("carouselpc")[0].style.display="none"
+  new Glide('.g-glide', {
+  type: 'carousel',
+  perView: 2, 
+  gap: 20, 
+  autoplay: 3000,
+  animationDuration: 500,
+  }).mount();
+  }                    
+   </script>
+  
+  <script>
+    if (window.innerWidth <= 770 && window.innerWidth >= 500) {
+     document.getElementsByClassName("g2-glide")[0].style.display="block"
+  
+    new Glide('.g2-glide', {
+    type: 'carousel',
+    perView: 1, 
+    gap: 20, 
+    autoplay: 3000,
+    animationDuration: 500,
+    direction: 'rtl',
+    }).mount();
+    } else if (window.innerWidth < 500) {
+    document.getElementsByClassName("g2-glide")[0].style.display="block"
+    new Glide('.g2-glide', {
+    type: 'carousel',
+    perView: 1, 
+    gap: 20, 
+    autoplay: 3000,
+    animationDuration: 500,
+    direction: 'rtl',
+  }).mount();
+  }                    
+   </script>
   </section>
 
-  <section id="clients" l>
-     <h1 class="display-3 my-5 font-weight-bold text-center" style="font-weight:bold !important">CLIENTS WHO <purp>TRUST</purp> US</h1>
-      <div class="owl-carousel owl-theme">
+  <section id="clients">
+    <h1 class="display-3  font-weight-bold text-center" id="clients-who-trust-text-mobile" style="font-weight:bold !important">CLIENTS WHO <br><purp>TRUST</purp> US</h1>
+    <h1 class="display-4 font-weight-bold text-center" id="clients-who-trust-text-pc" style="font-weight:bold !important">CLIENTS WHO <purp>TRUST</purp> US</h1>
+  <div class="glide">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="./assets/images/Clients/1.webp" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/2.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/3.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/4.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/5.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/6.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/7.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/8.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/9.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/10.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/11.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/12.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/13.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/14.png" class="client-img" /></li>
+        <li class="glide__slide"><img src="./assets/images/Clients/15.jpeg" class="client-img" /></li>
+      </ul>
+    </div>
+  </div>
+</section>
+  <style>
+    .glide__slide{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (min-width:770px){
+    #clients-who-trust-text-mobile{
+      display: none;
+      margin-bottom: 90px;
+    }
+  }
+  #clients-who-trust-text-mobile{
 
-     <div class='item my-auto'>
-                <img src="./assets/images/Clients/1.webp"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/2.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/3.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/4.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/5.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/6.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/7.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/8.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/9.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/10.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/11.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/12.png"  />
-            </div>
-            <div class='item my-auto'>
-                <img src="./assets/images/Clients/13.png"  />
-            </div>
-      </div>
-  </section>
+margin-bottom: 50px;
+}
+  #clients-who-trust-text-pc{
+
+      margin-bottom: 90px;
+    }
+  @media (max-width:770px){
+    #clients-who-trust-text-pc{
+      display: none;
+      margin-bottom: 90px;
+    }
+  }
+    .client-img{
+      max-width: 150px;
+      cursor: pointer;
+    }
+    @media (max-width:600px){
+      .client-img{
+      max-width: 80px;
+    }
+    }
+  </style>
+<script>
+  if (window.innerWidth > 1000) {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 6, 
+      gap: 20, 
+      autoplay: 3000,
+      animationDuration: 500,
+    }).mount();
+  } else if (window.innerWidth <= 1000 && window.innerWidth >= 550) {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 4, 
+      gap: 20, 
+      autoplay: 3000,
+      animationDuration: 500,
+    }).mount();
+  } else if (window.innerWidth < 550) {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 3, 
+      gap: 20, 
+      autoplay: 3000,
+      animationDuration: 500,  
+    }).mount();
+  }
+</script>
 
   <section id="gradient-end" >
     <div class="container">
@@ -336,10 +505,11 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="./assets/images/logo.png" style="width:100%;object-fit:contain;justify-content-center">
+          <img src="./assets/images/logo.png" style="width:80%;object-fit:contain;justify-content:center">
+
         </div>
         <div class="col-md-6 p">
-        <h1 class="display-3" style="font-weight:bold !important">WHO <purp>WE</purp> ARE</h1>
+        <h1 class="display-3" >WHO WE ARE</h1>
     Struggling with finding the right marketing plan!
     We are here to help.
 
@@ -356,7 +526,7 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-6">
-            <h1 class="display-3" style="font-weight:bold !important"><purp>CONNECT</purp> WITH US</h1>
+            <h1 class="display-3" style="font-weight:bold;"><purp>CONNECT</purp> WITH US</h1>
           <form class="my-auto" action="mailer.php" method="get">
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
@@ -396,7 +566,7 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
              <br>
           </h5>
             <div style="max-width:100%;overflow:hidden;color:red;height:600px;"><div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=K.+R.+Cama+Oriental+Institute,+East,+Fort,+Mumbai,+Maharashtra,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
-              <style>#embedded-map-display .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;</style></div>
+              <style>#embedded-map-display .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;}</style></div>
         </div>
       </div>
     </div>
@@ -446,24 +616,10 @@ border: 1px solid rgba(44, 67, 79, 0.3);">
 
 
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
-  <script src='https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js'></script>
-  <script  src="./script.js"></script>
-  <script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
-  <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script>
-      $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 100,
-          autoplay: true,
-          autoplayHoverPause:false,
-          autoplayTimeout: 2000,
-          autoWidth: true
-        });
-      });
-  </script>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+<script src='https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js'></script>
+<script  src="./script.js"></script>
+<script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
 </body>
 </html>
